@@ -10,7 +10,15 @@ namespace Singleton
         Singleton_2() {}
         public static Singleton_2 Instance
         {
-
+            get
+            {
+                return Nested.instance;
+            }
+        }
+        class Nested
+        {
+            static Nested() {}
+            internal static readonly Singleton_2 instance = new Singleton_2();
         }
     }
 }
