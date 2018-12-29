@@ -10,13 +10,51 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            int n = 10;
-            int[] nums = new int[n];
-            for (int i = 0; i < n; i++)
-                nums[i] = i * 2;
-            for (int i = 0; i < n; i++)
-                Console.WriteLine("num[{0}] = {1}", i, nums[i]);
+            ArrayTest nums = new ArrayTest(10);
+            nums.printArray();
             Console.ReadKey();   
         }
     }
+    class ArrayTest
+    {
+        private int length;
+        int[] nums;
+        public ArrayTest(int _length = 10)
+        {
+            length = _length;
+            nums = new int[length];
+        }
+        public void printArray()
+        {
+            for (int i = 0; i < length; i++)
+                nums[i] = i * 2;
+            for (int i = 0; i < length; i++)
+                Console.WriteLine("num[{0}] = {1}", i, nums[i]);
+        }
+    }
+    class Box
+    {
+        private double length;   
+        private double breadth;  
+        private double height;   
+        public void setLength(double len)
+        {
+            length = len;
+        }
+
+        public void setBreadth(double bre)
+        {
+            breadth = bre;
+        }
+
+        public void setHeight(double hei)
+        {
+            height = hei;
+        }
+        public double getVolume()
+        {
+            return length * breadth * height;
+        }
+    }
+
 }
