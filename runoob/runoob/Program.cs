@@ -10,8 +10,15 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            ArrayTest nums = new ArrayTest(10);
-            nums.printArray();
+            int a = 0, b = 1;
+            RefTest reftest = new RefTest();
+            reftest.refSwap(ref a, ref b);
+            Console.WriteLine("a = {0}, b = {1}", a, b);
+
+            OutTest outtest = new OutTest();
+            outtest.outNums(out a, out b);
+            Console.WriteLine("a = {0}, b = {1}", a, b);
+
             Console.ReadKey();   
         }
     }
@@ -30,6 +37,25 @@ namespace runoob
                 nums[i] = i * 2;
             for (int i = 0; i < length; i++)
                 Console.WriteLine("num[{0}] = {1}", i, nums[i]);
+        }
+    }
+    class RefTest
+    {
+        public void refSwap(ref int a, ref int b)
+        {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
+    }
+    class OutTest
+    {
+        public void outNums(out int a, out int b)
+        {
+            DateTime today = DateTime.Today;
+            a = today.Month;
+            b = today.Day;
         }
     }
     class Box
