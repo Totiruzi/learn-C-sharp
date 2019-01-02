@@ -10,14 +10,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            int a = 0, b = 1;
-            RefTest reftest = new RefTest();
-            reftest.refSwap(ref a, ref b);
-            Console.WriteLine("a = {0}, b = {1}", a, b);
-
-            OutTest outtest = new OutTest();
-            outtest.outNums(out a, out b);
-            Console.WriteLine("a = {0}, b = {1}", a, b);
+            Console.WriteLine("num = {0}", StaticTest.getNum());
 
             Console.ReadKey();   
         }
@@ -58,29 +51,17 @@ namespace runoob
             b = today.Day;
         }
     }
-    class Box
+    class StaticTest
     {
-        private double length;   
-        private double breadth;  
-        private double height;   
-        public void setLength(double len)
+        public static int num = 1;
+        public void count()
         {
-            length = len;
+            num++;
         }
-
-        public void setBreadth(double bre)
+        public static int getNum()
         {
-            breadth = bre;
-        }
-
-        public void setHeight(double hei)
-        {
-            height = hei;
-        }
-        public double getVolume()
-        {
-            return length * breadth * height;
+            return num;
         }
     }
-
+    int StaticTest::num = 1;
 }
