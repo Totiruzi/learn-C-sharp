@@ -10,7 +10,8 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("num = {0}", StaticTest.getNum());
+
+            
 
             Console.ReadKey();   
         }
@@ -51,17 +52,30 @@ namespace runoob
             b = today.Day;
         }
     }
-    class StaticTest
+    // https://www.geeksforgeeks.org/c-types-of-variables/
+    class VarTest
     {
-        public static int num = 1;
-        public void count()
+        // These variables are instance variables. 
+        // These variables are in a class and are not inside any function 
+        public int insVar;
+        // static variable s
+        public static int staVar = 0;
+
+        // constant variable 
+        // constant variables can’t be modified once after their declaration, 
+        // so it’s must intialize at the time of declaration only.
+        public const float consVar = 0;
+
+        // readonly variables 
+        // It’s not compulsory to initialize a read-only variable at the time of the declaration, 
+        // they can also be initialized under the constructor.
+        public readonly int readVar;
+
+        public VarTest()
         {
-            num++;
+            insVar = 0;
+            readVar = 0;
         }
-        public static int getNum()
-        {
-            return num;
-        }
+        
     }
-    int StaticTest::num = 1;
 }
