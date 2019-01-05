@@ -6,16 +6,6 @@ using System.Threading.Tasks;
 
 namespace runoob
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
-
-            
-
-            Console.ReadKey();   
-        }
-    }
     class ArrayTest
     {
         private int length;
@@ -74,6 +64,7 @@ namespace runoob
         public VarTest()
         {
             insVar = 0;
+
             readVar = 0;
         }
         
