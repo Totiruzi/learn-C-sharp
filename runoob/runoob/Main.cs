@@ -10,8 +10,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            ChildTest t = new ChildTest();
-            t.Test();
+            Box.Test();
             Console.ReadKey();
         }
     }
