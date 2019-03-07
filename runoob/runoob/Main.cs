@@ -10,9 +10,8 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            TestInterface ti = new TestInterface();
-            ti.Test();
-            Console.ReadKey();
+            Polymorphism poly = new Polymorphism();
+            poly.Test();
         }
     }
 }

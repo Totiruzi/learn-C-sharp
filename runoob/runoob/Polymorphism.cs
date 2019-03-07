@@ -31,7 +31,50 @@ C# 多态性
 
 namespace runoob
 {
+    class Shape
+    {
+        protected int width, height;
+        public Shape(int a = 0, int b = 0)
+        {
+            width = a;
+            height = b;
+        }
+        public virtual void Area()
+        {
+            Console.WriteLine("父类的面积：{0}", width * height);
+        }
+    }
+    class Rectangle : Shape
+    {
+        public Rectangle(int a = 0, int b = 0) : base(a, b)
+        {
+
+        }
+        public override void Area()
+        {
+            Console.WriteLine("Rectangle 类的面积：{0}", width * height);
+        }
+    }
+    class Triangle : Shape
+    {
+        public Triangle(int a = 0, int b = 0) : base(a, b)
+        {
+
+        }
+        public override void Area()
+        {
+            Console.WriteLine("Triangle 类的面积：{0}", width * height / 2);
+        }
+    }
     class Polymorphism
     {
+        public void Test()
+        {
+            Shape entry = new Rectangle(3, 4);
+            entry.Area();
+            entry = new Triangle(3, 4);
+            entry.Area();
+            Console.ReadKey();
+        }
     }
 }
