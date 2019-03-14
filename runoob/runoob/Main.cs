@@ -10,8 +10,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            Polymorphism poly = new Polymorphism();
-            poly.Test();
+            OperatorOverload.Test();
         }
     }
 }
