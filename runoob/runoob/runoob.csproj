@@ -46,6 +46,7 @@
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interface.cs" />
     <Compile Include="main.cs" />
+    <Compile Include="NameSpace.cs" />
     <Compile Include="OperatorOverload.cs" />
     <Compile Include="Overload.cs" />
     <Compile Include="Polymorphism.cs" />
