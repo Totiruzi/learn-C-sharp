@@ -50,6 +50,7 @@
     <Compile Include="OperatorOverload.cs" />
     <Compile Include="Overload.cs" />
     <Compile Include="Polymorphism.cs" />
+    <Compile Include="Preprocessor.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
