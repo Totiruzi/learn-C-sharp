@@ -1,9 +1,9 @@
-﻿using System;
+﻿#define DEBUG
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 
 /*
 预处理器指令指导编译器在实际编译开始之前对信息进行预处理。
@@ -25,10 +25,19 @@ C# 编译器没有一个单独的预处理器，但是，指令被处理时就�
 #endregion	标识 #region 块的结束。
 -----------------------------------
  */
+
 namespace runoob
 {
     class Preprocessor
     {
-
+        void PreprocessorTest()
+        {
+            #if (DEBUG)
+                Console.WriteLine("DEBUG is defined");     
+            #else
+                Console.WriteLine("DEBUG is not defined"); 
+            #endif
+                Console.ReadKey();
+        }
     }
 }
