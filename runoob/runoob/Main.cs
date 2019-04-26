@@ -11,7 +11,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            RegularExpression.TestRegexp();
+            ExceptionHandling.TestException();
             Console.ReadKey();
         }
     }
