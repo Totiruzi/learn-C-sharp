@@ -11,7 +11,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            ExceptionHandling.TestException();
+            FileIO.TestStreamIO();
             Console.ReadKey();
         }
     }
