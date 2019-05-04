@@ -1,4 +1,4 @@
-﻿#define DEBUG
+﻿//#define DEBUG
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 预处理器指令不是语句，所以它们不以分号（;）结束。
 C# 编译器没有一个单独的预处理器，但是，指令被处理时就像是有一个单独的预处理器一样。
 在 C# 中，预处理器指令用于在条件编译中起作用。与 C 和 C++ 不同的是，它们不是用来创建宏。一个预处理器指令必须是该行上的唯一指令。
+使用 #define 创建的符号的作用域是在其中定义它的文件。
+VS中的Debug buid使用了#define DEBUG作用于整个解决方案
 ----------------------------------
 #define	    用于定义一系列成为符号的字符。
 #undef	    用于取消定义符号。

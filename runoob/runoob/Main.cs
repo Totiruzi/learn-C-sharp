@@ -11,7 +11,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            FileIO.TestStreamIO();
+            AttributeConditional.Test();
             Console.ReadKey();
         }
     }
