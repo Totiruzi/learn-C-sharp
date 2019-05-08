@@ -11,7 +11,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            AttributeConditional.Test();
+            TestAuthorAttribute.Test();
             Console.ReadKey();
         }
     }
