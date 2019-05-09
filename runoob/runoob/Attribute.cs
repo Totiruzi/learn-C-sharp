@@ -1,22 +1,57 @@
-﻿#define DEBUG
+﻿#define TRACE_ON  
 using System;
 using System.Diagnostics;
+using System.Reflection;
+using System.Runtime.InteropServices;
+
+
 
 namespace runoob
 {
-    class AttributeConditional
+    //Obsolete Attribute
+    [System.Obsolete("use class B")]
+    class A
     {
-        [Conditional("DEBUG")]
-        public static void DebugMessage(string msg)
+        public void Method() { }
+    }
+    class B
+    {
+        [System.Obsolete("use NewMethod", true)]
+        public void OldMethod() { }
+        public void NewMethod() { }
+    }
+
+    // Conditional Attribute
+    public class Trace
+    {
+        [Conditional("TRACE_ON")]
+        public static void Msg(string msg)
         {
             Console.WriteLine(msg);
         }
-        public static void Test()
+    }
+    // Using Multiple Identifiers
+    class MultiIdentif
+    {
+        //  using the OR operator
+        [Conditional("A"), Conditional("B")]
+        static void DoIfAorB()
         {
-            DebugMessage("debug");
-            Console.ReadKey();
+            // ...  
+        }
+        // using the AND operator
+        [Conditional("A")]
+        static void DoIfA()
+        {
+            DoIfAandB();
+        }
+        [Conditional("B")]
+        static void DoIfAandB()
+        {
+            // Code to execute when both A and B are defined...  
         }
     }
+    
 
     // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/attributes/index
     //creating custom Attributes
@@ -82,6 +117,24 @@ namespace runoob
             }
 
         }
+    }
+
+    // Add a using directive for System.Runtime.InteropServices.  
+    // All of the fields of TestUnion start at the same location in memory
+    [System.Runtime.InteropServices.StructLayout(LayoutKind.Explicit)]
+    struct TestUnion
+    {
+        [System.Runtime.InteropServices.FieldOffset(0)]
+        public int i;
+
+        [System.Runtime.InteropServices.FieldOffset(0)]
+        public double d;
+
+        [System.Runtime.InteropServices.FieldOffset(0)]
+        public char c;
+
+        [System.Runtime.InteropServices.FieldOffset(0)]
+        public byte b;
     }
 
 }
