@@ -11,7 +11,7 @@ namespace runoob
     {
         static void Main(string[] args)
         {
-            TestAuthorAttribute.Test();
+            SaleItem.Test();
             Console.ReadKey();
         }
     }

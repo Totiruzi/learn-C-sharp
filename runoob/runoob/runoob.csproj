@@ -54,6 +54,7 @@
     <Compile Include="Overload.cs" />
     <Compile Include="Polymorphism.cs" />
     <Compile Include="Preprocessor.cs" />
+    <Compile Include="Property.cs" />
     <Compile Include="RegularExpression.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
