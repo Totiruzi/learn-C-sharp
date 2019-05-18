@@ -46,6 +46,7 @@
     <Compile Include="Attribute.cs" />
     <Compile Include="ExceptionHandling.cs" />
     <Compile Include="FileIO.cs" />
+    <Compile Include="Indexer.cs" />
     <Compile Include="Inheritance.cs" />
     <Compile Include="Interface.cs" />
     <Compile Include="main.cs" />
