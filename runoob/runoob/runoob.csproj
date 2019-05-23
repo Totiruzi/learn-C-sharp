@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attribute.cs" />
+    <Compile Include="Delegate.cs" />
     <Compile Include="ExceptionHandling.cs" />
     <Compile Include="FileIO.cs" />
     <Compile Include="Indexer.cs" />
